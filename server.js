@@ -79,17 +79,17 @@ app.post("/contact-us", function (req, res) {
 
     const msg = {
       to: email,
-      cc: "yourexpertmover@yahoo.com",
+      cc: "Assadullah_afaq@yahoo.com",
       // bcc: 'Assadullah_afaq@yahoo.com',
       from: {
-        email: "asad.afaq97@gmail.com",
-        name: "Expert Movers",
+        email: "info@reliancerestorations.ca",
+        name: "Reliance Restoration",
       },
-      subject: subject + "Contact Us Form Submission",
+      subject: subject + " Contact Us Form Submission",
       html: `Hello ${name}, <br>
                 Thanks for reaching us out today.
-                An Expert Movers' representative will be with you shortly. At the mean time you can check the following info that you have entered, if there is anything you want to change you can email us at: <br>
-                yourexpertmover@yahoo.com
+                One of our representative will be with you shortly. At the mean time you can check the following info that you have entered, if there is anything you want to change you can email us at: <br>
+                info@reliancerestorations.ca
                 <br>
                 Or you can call us directly at: <br>
                 6477236820
@@ -99,11 +99,13 @@ app.post("/contact-us", function (req, res) {
                 <br>
                 Email:           ${email}
                 <br>
-                Notes:             ${message}
+                Subject:         ${subject}
+                <br>
+                Message:             ${message}
                 <br>
                 <br>
-                if you'd like to know more about Expert Movers you can visit our website at: <br>
-                https://www.yourexpertmover.com/
+                if you'd like to know more about Reliance Restoration you can visit our website at: <br>
+                https://www.reliancerestorations.ca/
                 `,
     };
 
