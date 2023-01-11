@@ -50,32 +50,35 @@ app.post("/contact-us", function (req, res) {
   }
 
   if (validate) {
-    // const db = mysql.createConnection({
-    //   host: "us-cdbr-east-06.cleardb.net",
-    //   user: "b7ec52bd22d47f",
-    //   password: "e2c10bad",
-    //   database: "heroku_4a49882ad16bd28",
-    // });
 
-    // db.connect((err) => {
-    //   if (err) {
-    //     console.log(err);
-    //   }
-    //   console.log("connected successfull!");
-    // });
-    // let sql =
-    //   "INSERT INTO CONTACTS (name, phone, email, date, fromAdd, toAdd,message) values(?,?,?,?,?,?,?)";
-    // db.query(
-    //   sql,
-    //   [name, phone, email, date, from, to, message],
-    //   (err, result) => {
-    //     if (err) console.log(err);
-    //     console.log("1 record added");
-    //   }
-    // );
+    const db = mysql.createConnection({
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      database: process.env.DB_NAME
+    });
+
+    db.connect((err) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log("connected successfull!");
+    });
+    let sql =
+      "INSERT INTO CONTACTS (name, email, subject, message) values(?,?,?,?)";
+    db.query(
+      sql,
+      [name, email, subject, message],
+      (err, result) => {
+        if (err) console.log(err);
+        console.log("1 record added");
+      }
+    );
 
     const sgMail = require("@sendgrid/mail");
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+
 
     const msg = {
       to: email,
@@ -134,3 +137,5 @@ function onHttpStart() {
 }
 
 app.listen(HTTP_PORT, onHttpStart);
+
+
