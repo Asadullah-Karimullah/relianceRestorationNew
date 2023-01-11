@@ -1,5 +1,4 @@
-// using Twilio SendGrid's v3 Node.js Library
-// https://github.com/sendgrid/sendgrid-nodejs
+
 const path = require("path");
 const express = require("express");
 const app = express();
