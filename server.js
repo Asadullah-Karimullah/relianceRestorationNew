@@ -85,7 +85,7 @@ app.post("/contact-us", function (req, res) {
         email: "asad.afaq97@gmail.com",
         name: "Expert Movers",
       },
-      subject: "Contact Us Form Submission",
+      subject: subject + "Contact Us Form Submission",
       html: `Hello ${name}, <br>
                 Thanks for reaching us out today.
                 An Expert Movers' representative will be with you shortly. At the mean time you can check the following info that you have entered, if there is anything you want to change you can email us at: <br>
