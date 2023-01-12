@@ -165,6 +165,15 @@
     border-radius: 100px;
 }
 
+.service-item img{
+    
+    height: 100%;
+    width: 100%;
+    display: block;
+    max-height: 32vh;
+    object-fit: cover;
+}
+
 .service-item .service-icon i {
     transition: .2s;
 }
