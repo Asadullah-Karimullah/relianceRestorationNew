@@ -82,8 +82,8 @@ app.post("/contact-us", function (req, res) {
 
     const msg = {
       to: email,
-      cc: "Assadullah_afaq@yahoo.com",
-      // bcc: 'Assadullah_afaq@yahoo.com',
+      bcc: "Assadullah_afaq@yahoo.com",
+      // bcc: 'info@reliancerestorations.ca',
       from: {
         email: "info@reliancerestorations.ca",
         name: "Reliance Restoration",
