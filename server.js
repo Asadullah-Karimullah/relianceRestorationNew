@@ -88,7 +88,7 @@ app.post("/contact-us", function (req, res) {
         email: "info@reliancerestorations.ca",
         name: "Reliance Restoration",
       },
-      subject: subject + " Contact Us Form Submission",
+      subject: " Welcome! Thank you for contacting Reliance Restoration",
       html: `Hello ${name}, <br>
                 Thanks for reaching us out today.
                 One of our representative will be with you shortly. At the mean time you can check the following info that you have entered, if there is anything you want to change you can email us at: <br>
