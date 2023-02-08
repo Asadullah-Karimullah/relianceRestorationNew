@@ -289,12 +289,13 @@
     
     
     width: 100%;
-    border-radius: 50%;
+    border-radius: 10%;
     line-height: 1.2;
     position: relative;
     /* text-align: center;
     align-items: center; */
     /* padding: 80px; */
+
     
 }
 
@@ -306,7 +307,6 @@
 
 .circle-txt{
     position: absolute;
-    bottom: 20%;
     width: 100%;
     padding-top: 30px;
     padding-left: 20px;
