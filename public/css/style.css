@@ -141,6 +141,8 @@
         font-weight: 500 !important;
     }
 
+    
+
     .carousel-caption h1 {
         font-size: 30px;
         font-weight: 600 !important;
@@ -268,6 +270,7 @@
         left: 50%;
         background: var(--primary)
     }
+
 }
 
 .footer-shape::before {
@@ -279,4 +282,51 @@
     left: -40px;
     background: var(--primary);
     transform: skew(40deg);
+}
+
+
+.border-radius-50{
+    
+    
+    width: 100%;
+    border-radius: 50%;
+    line-height: 1.2;
+    position: relative;
+    /* text-align: center;
+    align-items: center; */
+    /* padding: 80px; */
+    
+}
+
+.border-radius-50::after{
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+}
+
+.circle-txt{
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    
+}
+
+@media (max-width: 991.98px){
+.border-radius-50{
+
+    line-height: 1.4;
+}
+.circle-txt{
+    bottom: 20%;
+}
+}
+
+@media (min-width: 1200px){
+   .circle-txt{
+    bottom: 40%;
+} 
 }
