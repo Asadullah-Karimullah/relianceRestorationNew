@@ -330,3 +330,16 @@
     bottom: 40%;
 } 
 }
+
+@media (max-width: 576px){
+
+.circle-txt {
+    bottom: 1%;
+}
+.circle-txt h2 {
+    font-size: smaller;
+}
+.circle-txt p {
+    font-size: smaller;
+}
+}
